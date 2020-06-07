@@ -11,6 +11,6 @@ export default {
 export const counter = () => {
   const content = text('name', 'mung1')
   return (
-    <Counter name={content}/>
+    <Counter name={content} />
   )
 }

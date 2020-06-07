@@ -1,6 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
+import { linkTo } from '@storybook/addon-links'
 
 export default {
   title: 'Button',
@@ -16,3 +17,7 @@ export const Emoji = () => (
     </span>
   </Button>
 );
+
+export const LinkTest = () => (
+  <button onClick={linkTo('Counter', 'Counter')}>Go to "Counter"</button>
+)
