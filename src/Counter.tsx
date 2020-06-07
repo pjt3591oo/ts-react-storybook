@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface CounterProps {
   name: string;
+  onChange: any;
 }
 
 const Counter: React.FC<CounterProps> = props => {
-  const [ name, setName ] = useState(props.name)
-
-  const onChange = (e: any) => {
-    setName(e.target.value)
-  }
-
+  
   return (
     <>
-      <p>{name} counter</p>
-      <input value={name} onChange={onChange}/>
+      <p>{props.name} counter</p>
+      <input value={props.name} onChange={props.onChange}/>
     </>
   )
 }
